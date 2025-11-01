@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.ts",
+    "start": "concurrently \"nodemon index.ts\" \"npx sass --watch public/admin/scss:public/admin/css\" \"npx sass --watch public/client/scss:public/client/css\"",
     "build": "tsc && node copy-dir.js",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/express": "^5.0.5",
     "@types/node": "^24.9.2",
+    "concurrently": "^9.2.1",
     "fs-extra": "^11.3.2",
     "nodemon": "^3.1.10",
     "pre-commit": "^1.2.2",
