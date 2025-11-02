@@ -1,4 +1,6 @@
-.button {
+@use "../abstracts/variables" as *;
+
+%button {
   display: inline-block;
   padding: 8px 20px;
   border-radius: 45px;
@@ -8,4 +10,26 @@
   font-weight: 500;
   transition: all 0.3s ease 0s;
   border: none;
+}
+
+.button--two {
+  @extend %button;
+  background: $color-two;
+  color: #fff;
+
+  &:hover {
+    background: $color-one;
+    color: #fff
+  }
+}
+
+.button--one {
+  @extend %button;
+  background: $color-one;
+  color: #fff;
+
+  &:hover {
+    background: $color-two;
+    color: #fff;
+  }
 }

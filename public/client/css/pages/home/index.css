@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+.section-one {
+  background-image: url(../../../images/banner-bg.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.section-one__wrap {
+  text-align: center;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.section-one__title {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.section-one__desc {
+  color: #fff;
+}
+
+.button--one, .button--two {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 45px;
+  background: #fff;
+  color: #1e1e1e;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease 0s;
+  border: none;
+}
+
+.button--two {
+  background: #FF589E;
+  color: #fff;
+}
+.button--two:hover {
+  background: #8261EE;
+  color: #fff;
+}
+
+.button--one {
+  background: #8261EE;
+  color: #fff;
+}
+.button--one:hover {
+  background: #FF589E;
+  color: #fff;
+}
+
+/*# sourceMappingURL=index.css.map */
