@@ -6,7 +6,7 @@
     "start": "concurrently \"nodemon index.ts\" \"npx sass --watch public/admin/scss:public/admin/css\" \"npx sass --watch public/client/scss:public/client/css\"",
     "build": "tsc && node copy-dir.js && sass public/client/scss:dist/public/client/css",
     "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
+    "add-build": "git add dist public/client/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "pre-commit": [
