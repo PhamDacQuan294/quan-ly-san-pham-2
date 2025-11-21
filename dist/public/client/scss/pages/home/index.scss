@@ -1,2 +1,11 @@
 @use "section-one";
-@use "../../components//button";
+@use "section-two";
+@use "section-three";
+@use "section-feature";
+@use "section-products";
+@use "section-compare";
+@use "section-feedback";
+@use "section-agency";
+@use "footer";
+@use "../../components/button";
+@use "../../base/animations";

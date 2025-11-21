@@ -1,27 +1,21 @@
-.header 
+.header
   .container 
-    .row 
+    .row
       .col-12 
-        .header__main
-          .header__logo
-            a(href="/")
-              img(src="/client/images/logo.png" alt="Logo")
+        .header__inner
           .header__menu
             ul.header__list
+              li.header__item.header__item--active
+                a.header__link(href="#") Home
               li.header__item
-                a(href="#" class="active")
-                  | Home 
+                a.header__link(href="#") Product
               li.header__item
-                a(href="/")
-                  | About 
+                a.header__link(href="#") Wholesaler
               li.header__item
-                a(href="/")
-                  | Work Process 
-              li.header__item
-                a(href="/")
-                  | Work Process 
-              li.header__item
-                a(href="/")
-                  | Work Process 
-          .header__icon-mobi
-            i.fa-solid.fa-bars
+                a.header__link(href="#") Contact
+            .header__logo
+              a.header__logo-link(href="/")
+                img.header__logo-img(src="/client/images/logo2.png" alt="Logo")
+                span.header__logo-text Cát mịn cho boss xịn
+          .header__decor
+            img.header__decor-img(src="/client/images/border1.png" alt="Decor")

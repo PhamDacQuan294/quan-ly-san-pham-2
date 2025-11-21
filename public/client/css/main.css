@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  color: #1e1e1e;
+  color: #273D8F;
   line-height: 1.6;
   font-family: "Raleway", sans-serif;
   margin: 0;
@@ -13,60 +13,191 @@ body {
 
 a {
   text-decoration: none;
-  color: #1e1e1e;
+  color: #273D8F;
 }
 a:hover {
   text-decoration: none;
 }
 
 .header {
-  position: fixed;
-  top: 40px;
-  width: 100%;
-  z-index: 9999;
+  position: relative;
 }
-.header__main {
+.header__inner {
   display: flex;
-  padding: 25px 30px;
-  border-radius: 45px;
-  background: #fff;
   align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
-.header__logo img {
-  height: 30px;
-  width: auto;
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 .header__list {
   display: flex;
   list-style: none;
-  padding: 0;
+  gap: 20px;
   margin: 0;
+  padding: 0;
 }
-.header__item {
-  margin-left: 25px;
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.header__item a {
-  font-size: 14px;
-  font-weight: 500;
+.header__logo-link {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-.header__item a:hover {
-  color: #FF589E;
-}
-.header__item .active {
-  color: #FF589E;
-}
-.header__icon-mobi {
-  display: none;
-  font-size: 24px;
+.header__decor {
+  position: absolute;
+  right: -400px;
 }
 @media (max-width: 991.98px) {
+  .header__inner {
+    flex-direction: column;
+    gap: 16px;
+  }
   .header__menu {
+    order: 2;
+  }
+  .header__list {
+    gap: 16px;
+  }
+  .header__logo {
+    order: 1;
+    width: 200px;
+  }
+  .header__logo-img {
+    width: 100%;
+  }
+  .header__decor {
     display: none;
   }
-  .header__icon-mobi {
-    display: block;
+}
+
+.footer {
+  background: #f9f9ff;
+  padding: 80px 0;
+  color: #233c8b;
+  font-family: "Poppins", sans-serif;
+}
+.footer__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+.footer__cat {
+  width: 250px;
+}
+.footer__cat img {
+  width: 100%;
+  height: auto;
+}
+.footer__content {
+  text-align: center;
+}
+.footer__content .footer__logo {
+  width: 160px;
+  margin: 0 auto 10px;
+}
+.footer__content .footer__logo-img {
+  width: 100%;
+}
+.footer__content .footer__slogan {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+.footer__content .footer__form {
+  display: flex;
+  justify-content: center;
+}
+.footer__content .footer__form .footer__input {
+  padding: 10px 16px;
+  border-radius: 30px 0 0 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 220px;
+  font-size: 0.9rem;
+}
+.footer__content .footer__form .footer__btn {
+  background: #233c8b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.footer__content .footer__form .footer__btn:hover {
+  background: #1a2e70;
+}
+.footer__info {
+  text-align: left;
+}
+.footer__info .footer__label {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 3px;
+}
+.footer__info .footer__company {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.footer__info .footer__phone {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #233c8b;
+  text-decoration: none;
+}
+.footer__info .footer__phone:hover {
+  text-decoration: underline;
+}
+.footer__info .footer__address {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.footer__info .footer__social .footer__social-label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
+.footer__info .footer__social .footer__social-list {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+}
+.footer__info .footer__social .footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #233c8b;
+  color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.footer__info .footer__social .footer__social-link:hover {
+  background: #ffda00;
+  color: #233c8b;
+}
+.footer__info .footer__social .footer__social-link i {
+  font-size: 16px;
+}
+@media (max-width: 992px) {
+  .footer__main {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .footer__info {
+    text-align: center;
   }
 }
 

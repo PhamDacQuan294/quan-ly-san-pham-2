@@ -1,0 +1,7 @@
+.section-agency
+  .container
+    h2.section-agency__title ĐẠI LÝ PHÂN PHỐI
+    .agency-list
+      each logo in ['emday.png', 'animal-doctors.png', 'vig-cat.png', 'pawsnation.png', 'catrons.png', 'indian-cat-litter.png']
+        .agency-item
+          img(src=`/client/images/${logo}` alt="agency logo")

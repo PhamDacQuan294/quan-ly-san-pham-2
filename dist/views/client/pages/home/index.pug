@@ -2,6 +2,27 @@ extends ../../layouts/default.pug
 
 block styles 
   link(rel="stylesheet", href="/client/css/pages/home/index.css") 
+  link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css") 
+  link(rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css") 
 
 block main 
   include ./section-one.pug
+  include ./section-two.pug
+  include ./section-three.pug
+  include ./section-features.pug
+  include ./section-products.pug
+  include ./section-compare.pug
+  include ./section-feedback.pug
+  include ./section-agency.pug
+  include ./footer.pug
+
+block script 
+  script(src="/client/js/base/wow.min.js")
+  script.
+    new WOW().init();
+  script.
+    $('.product-list').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3
+    });

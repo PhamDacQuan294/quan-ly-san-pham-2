@@ -1,0 +1,30 @@
+.section-agency {
+  padding: 100px 0;
+  text-align: center;
+  background: #fff;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #233c8b;
+    margin-bottom: 50px;
+  }
+
+  .agency-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+
+    .agency-item img {
+      height: 40px;
+      filter: grayscale(0%);
+      transition: all 0.3s ease;
+
+      &:hover {
+        filter: grayscale(100%);
+        transform: scale(1.05);
+      }
+    }
+  }
+}

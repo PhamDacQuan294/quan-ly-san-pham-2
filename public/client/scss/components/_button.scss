@@ -1,13 +1,15 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins";
 
 %button {
   display: inline-block;
-  padding: 8px 20px;
-  border-radius: 45px;
-  background: #fff;
-  color: $color-text;
-  font-size: 13px;
-  font-weight: 500;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 12px 36px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition: all 0.3s ease 0s;
   border: none;
 }
@@ -15,11 +17,11 @@
 .button--two {
   @extend %button;
   background: $color-two;
-  color: #fff;
+  color: $color-text3;
 
   &:hover {
     background: $color-one;
-    color: #fff
+    color: $color-text;
   }
 }
 
@@ -31,5 +33,61 @@
   &:hover {
     background: $color-two;
     color: #fff;
+  }
+}
+
+
+%carousel-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.carousel-btn--prev {
+  @extend %carousel-btn;
+  position: absolute;
+  left: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-btn--next {
+  @extend %carousel-btn;
+  position: absolute;
+  right: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@include mixins.respond('xl') {
+  .carousel-btn--prev {
+    left: 50px;
+  }
+
+  .carousel-btn--next {
+    right: 50px;
+  }
+}
+
+@include mixins.respond('lg') {
+  .carousel-btn--prev {
+    left: 10px;
+  }
+
+  .carousel-btn--next {
+    right: 10px;
   }
 }

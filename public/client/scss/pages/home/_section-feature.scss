@@ -1,0 +1,107 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables" as *;
+
+.feature {
+  padding: 100px 0 80px;
+
+  &__head {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      font-size: 38px;
+      line-height: 1;
+      display: block;
+    }
+  }
+
+  &__content {
+    .feature__title {
+      font-weight: $font-weight-bold;
+      color: $color-text;
+      font-size: $font-size-medium;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .feature__desc {
+      font-size: $font-size-small;
+      line-height: 1.7;
+      color: $color-text2;
+      max-width: 360px;
+    }
+  }
+
+  &__image {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @include mixins.respond('xl') {
+    .feature__desc {
+      max-width: 100%;
+    }
+  }
+
+  @include mixins.respond('lg') {
+    .feature__head {
+      margin-bottom: 40px;
+    }
+
+    .feature__image {
+      margin: 40px 0;
+    }
+  }
+
+  @include mixins.respond('sm') {
+    padding: 60px 0;
+
+    .feature__box {
+      gap: 16px;
+    }
+
+    .feature__icon {
+      width: 40px;
+      height: 40px;
+
+      i {
+        font-size: 28px;
+      }
+    }
+
+    .feature__content {
+      .feature__title {
+        font-size: 15px;
+      }
+
+      .feature__desc {
+        font-size: 13px;
+      }
+    }
+  }
+}
